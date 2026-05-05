@@ -115,6 +115,7 @@ bool canMove(int dx, int dy){
 
 int main()
 {
+    
     srand(time(0));
     b = rand() % 7;
     system("cls");
