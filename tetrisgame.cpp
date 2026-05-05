@@ -129,6 +129,7 @@ void removeLine(){
 
 int main()
 {
+    
     srand(time(0));
     b = rand() % 7;
     system("cls");
