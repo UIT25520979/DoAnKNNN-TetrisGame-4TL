@@ -32,7 +32,8 @@ char blocks[28][4][4] = {
     {{' ','J',' ',' '},{' ','J',' ',' '},{'J','J',' ',' '},{' ',' ',' ',' '}}
 };
 
-int x = 4, y = 1, b = 0;
+int x = 4, y = 0, b = 0;
+int loadingTime = 200;
 
 void gotoxy(int x, int y) {
     COORD c = { (short)x, (short)y };
@@ -104,18 +105,22 @@ bool spinBlock(int newType) {
 }
 
 void removeLine() {
-    int j;
     for (int i = H - 2; i > 0; i--) {
-        for (j = 1; j < W - 1; j++)
-            if (board[i][j] == ' ') break;
-
-        if (j == W - 1) {
-            for (int ii = i; ii > 0; ii--)
-                for (int j = 1; j < W - 1; j++)
-                    board[ii][j] = board[ii - 1][j];
+        bool hangDay = true;
+        for (int j = 1; j < W - 1; j++) {
+            if (board[i][j] == ' ') {
+                hangDay = false;
+                break;
+            }
+        }
+        if (hangDay) {
+            if (loadingTime > 40) loadingTime -= 10;
+            for (int k = i; k > 0; k--) {
+                for (int j = 1; j < W - 1; j++) {
+                    board[k][j] = board[k - 1][j];
+                }
+            }
             i++;
-            draw();
-            _sleep(200);
         }
     }
 }
@@ -129,12 +134,6 @@ int main() {
 
     system("cls");
     initBoard();
-
-    if (!canMove(0, 0)) {
-        cout << "GAME OVER!" << endl;
-        return 0;
-    }
-
     DWORD lastUpdateTime = GetTickCount();
 
     while (true) {
@@ -158,14 +157,13 @@ int main() {
             block2Board();
             draw();
         }
-
-        if (GetTickCount() - lastUpdateTime > 200) {
+        if (GetTickCount() - lastUpdateTime > (DWORD)loadingTime) {
             boardDelBlock();
             if (canMove(0, 1)) y++;
             else {
                 block2Board();
                 removeLine();
-                x = 4; y = 1;
+                x = 4; y = 0;
                 b = basicBlocks[rand() % 7];
                 if (!canMove(0, 0)) {
                     system("cls");
