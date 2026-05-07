@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <conio.h>
 #include <windows.h>
 using namespace std;
@@ -136,6 +136,11 @@ void removeLine(){
         }
     }
 }
+void speedUp() {
+    while (canMove(0, 1)) {
+        y++;
+    }
+}
 
 int main()
 {
@@ -145,14 +150,15 @@ int main()
     b = basicBlocks[rand() % 7];
     system("cls");
     initBoard();
-    while (1){
+    while (1) {
         boardDelBlock();
-        if (kbhit()){
+        if (kbhit()) {
             char c = getch();
-            if (c=='a' && canMove(-1,0)) x--;
-            if (c=='d' && canMove(1,0) ) x++;
-            if (c=='x' && canMove(0,1))  y++;
-            if (c=='q') break;
+            if (c == 'a' && canMove(-1, 0)) x--;
+            if (c == 'd' && canMove(1, 0)) x++;
+            if (c == 'x' && canMove(0, 1))  y++;
+            if (c == 's') speedUp();//Bấm 's' để rơi tự do
+            if (c == 'q') break;
         }
         if (canMove(0,1)) y++;
         else {
