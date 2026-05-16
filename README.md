@@ -31,7 +31,7 @@
 * [🎮 Core Gameplay Components](#-core-gameplay-components)
 * [⌨️ Control Mapping](#️-control-mapping)
 * [⚙️ Build & Compilation](#️-build--compilation)
-* [🚀 Upcoming Release](#-upcoming-release)
+* [🚀 Official Release](#-official-release)
 
 ---
 
@@ -228,7 +228,7 @@ SurvivalTetrisGame.exe
 
 ---
 
-## 🚀 Upcoming Release
+## 🚀 Official Release
 
 The production build of **Survival Tetris Game** are now available via **GitHub Releases**.
 
