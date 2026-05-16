@@ -230,7 +230,7 @@ SurvivalTetrisGame.exe
 
 ## 🚀 Upcoming Release
 
-The production build of **Survival Tetris Game** will soon be available via **GitHub Releases**.
+The production build of **Survival Tetris Game** are now available via **GitHub Releases**.
 
 The release package will include:
 
