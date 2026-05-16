@@ -9,15 +9,15 @@
 
 ## 📌 Project Overview
 
-| Category               | Details                   |
-| ---------------------- | ------------------------- |
-| **Core Language**      | C++17                     |
-| **Graphics Library**   | Raylib 5.5.0              |
-| **Toolchains**         | MinGW-w64 / Visual Studio |
-| **Target OS**          | Windows x64               |
-| **Course**             | Professional Skills       |
-| **Host Institution**   | UIT - VNU-HCM             |
-| **Faculty Supervisor** | Nguyễn Văn Toàn           |
+| Category               | Details                    |
+| ---------------------- | -------------------------- |
+| **Core Language**      | C++17                      |
+| **Graphics Library**   | Raylib 5.5.0               |
+| **Toolchains**         | MinGW-w64 / Visual Studio  |
+| **Target OS**          | Windows x64                |
+| **Course**             | Professional Skills (SS004)|
+| **Host Institution**   | UIT - VNU-HCM              |
+| **Faculty Supervisor** | Nguyen Van Toan            |
 
 **Survival Tetris Game** is a modern 2D survival puzzle game developed using **C++17** and **Raylib 5.5.0**. The project modernizes traditional Tetris gameplay by integrating modular software architecture, dynamic visual effects, adaptive difficulty systems, particle simulations, custom audio management, and persistent high-score storage.
 
