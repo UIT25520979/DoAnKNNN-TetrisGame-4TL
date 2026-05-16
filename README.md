@@ -115,7 +115,7 @@ Carefully managed memory cleanup to avoid long-session RAM bloat.
 ## 📁 Directory Structure
 
 ```text
-TetrisGameCode-4TL/
+TetrisGame/
 ├── .vscode/
 │   ├── c_cpp_properties.json
 │   ├── launch.json
@@ -124,7 +124,6 @@ TetrisGameCode-4TL/
 ├── assets/
 │   ├── audio/
 │   ├── data/
-│   │   └── highscore.txt
 │   └── images/
 │
 ├── include/
@@ -137,6 +136,8 @@ TetrisGameCode-4TL/
 │   ├── menudata.h
 │   ├── monument.h
 │   └── piece.h
+│   └── raylib.h
+│   └── raymath.h
 │
 ├── src/
 │   ├── audiohandler.cpp
@@ -149,9 +150,14 @@ TetrisGameCode-4TL/
 │   ├── monument.cpp
 │   └── piece.cpp
 │
+├── lib/
+│   ├── libraylib.a
+│   ├── raylib.lib
+│   
 ├── icon.rc
-├── README.md
 └── TetrisGameCode-4TL.vcxproj
+└── TetrisGameCode-4TL.vcxproj.filters
+└── packages.config
 ```
 
 ---
